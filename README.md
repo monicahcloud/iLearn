@@ -4,11 +4,11 @@ iLearn is a learning management system that enables teachers and students to man
 
 # Roles/Responsibilities
 
-*Utilized Angular to create a single-page application
-*Incorporated CSS and TypeScript to customize various elements throughout the application
-*Implemented Spring Boot and Postgres to access/modify user data
-*Utilized Git to maintain proper version control during development
-*Deployed application onto EC2 and S3 bucket
+* Utilized Angular to create a single-page application
+* Incorporated CSS and TypeScript to customize various elements throughout the application
+* Implemented Spring Boot and Postgres to access/modify user data
+* Utilized Git to maintain proper version control during development
+* Deployed application onto EC2 and S3 bucket
 
 
 # Technologies
