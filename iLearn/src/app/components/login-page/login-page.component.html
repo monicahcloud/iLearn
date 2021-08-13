@@ -1,6 +1,13 @@
-<h1>Welcome to iLearn</h1>
-    <p>Login to continue</p>
+<div class="container">
 
+    <nav class="navbar">
+        <h1>Welcome to iLearn</h1>
+        
+    </nav>
+
+
+<div class="login">
+   
     <form id="login" (ngSubmit)= "onSubmit()">
         <div class="input-div">
             <label for ="username"> Username: </label>
@@ -12,7 +19,7 @@
             required
             [(ngModel)] = "username"
             />
-            <div class="input-div" >
+          <div class="input-div" >
             <label for="password">Password: </label>
             <input
             id="password"
@@ -27,4 +34,7 @@
         <input type = "submit" value="Need an iLearn Account?"/>
         <input type = "submit" value="Login"/>
         </div>
+   
     </form>
+</div>
+</div>

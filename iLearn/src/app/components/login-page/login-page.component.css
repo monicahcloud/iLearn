@@ -1,3 +1,72 @@
 .input-div{
     margin-bottom: 10px;
 }
+
+h1{
+    font-size: 80px;
+    color:#ebebeb;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #011638 0%, #351d5d 100%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    height: 80px;
+    justify-content: end;
+    margin-right: 2rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.nav-link {
+    color: #ebebeb;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+.close-icon {
+    color: #ebebeb;
+}
+
+.menu {
+    color: #ebebeb;
+}
+
+
+.login{
+    margin-top: 150px;
+    margin-left: 500px;
+}
+
+.input-div{
+    font-weight: 800;
+    font-size:medium;
+
+}
+
