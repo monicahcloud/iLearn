@@ -17,6 +17,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.example.model.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,11 +39,13 @@ public class Discussion {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int dissId;
 	
+	
 	@Column(name="content")
 	private String dissContent;
 	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="user_id")
+	@JsonIgnore
 	private User user;
 	
 	@ManyToMany(cascade=CascadeType.ALL)

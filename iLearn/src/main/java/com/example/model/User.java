@@ -1,5 +1,6 @@
 package com.example.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -15,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.example.model.*;
@@ -57,6 +59,10 @@ public class User {
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="role_FK", updatable=false, insertable=true)
 	private UserRoles userRoles;
+	
+	@OneToMany(mappedBy="user", cascade=CascadeType.ALL)
+	@JsonIgnore
+	private List<Discussion> discussions = new ArrayList<>();
 	
 	@ManyToMany(mappedBy="likes")
 	@JsonIgnore
