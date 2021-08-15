@@ -1,16 +1,20 @@
 <div class="container">
-
+    <br>
     <nav class="navbar">
-        <h1>Welcome to iLearn</h1>
         
+        <h1>Welcome to iLearn Classroom</h1>
     </nav>
 
 
 <div class="login">
-   
+    <img src="http://atlantablackstar.com/wp-content/uploads/2016/01/bigstock-group-of-happy-college-student-82983188-e1452870378709.jpg" class="center " alt="..."width="800" height="400">
+
+</div>
+<div class="login-info">
+<h2 >Please sign in using your iLearn username and password.</h2>
     <form id="login" (ngSubmit)= "onSubmit()">
         <div class="input-div">
-            <label for ="username"> Username: </label>
+            <label for ="username">iLearn Username: </label>
             <input
             id="username"
             type="text"
@@ -18,9 +22,9 @@
             maxlength="50"
             required
             [(ngModel)] = "username"
-            />
+            /><br><br>
           <div class="input-div" >
-            <label for="password">Password: </label>
+            <label for="password"> Password: </label>
             <input
             id="password"
             type="password"
@@ -30,11 +34,11 @@
             [(ngModel)] = "password"
             />
         
-        </div>
-        <input type = "submit" value="Need an iLearn Account?"/>
+        
         <input type = "submit" value="Login"/>
-        </div>
+           </div></div>
    
     </form>
+
 </div>
 </div>

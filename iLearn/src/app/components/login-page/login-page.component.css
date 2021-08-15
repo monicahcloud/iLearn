@@ -1,12 +1,6 @@
 .input-div{
     margin-bottom: 10px;
 }
-
-h1{
-    font-size: 80px;
-    color:#ebebeb;
-}
-
 .navbar {
     background: linear-gradient(90deg, #011638 0%, #351d5d 100%);
     height: 80px;
@@ -68,5 +62,36 @@ h1{
     font-weight: 800;
     font-size:medium;
 
-}
 
+}
+h1 {
+    font-family: "Copperplate, Papyrus, fantasy";
+    text-align: center;
+    text-shadow: 2px 2px 5px red;
+    font-weight: bold; 
+    font-style: oblique;
+    font-size: 80px;
+    color:#ebebeb;
+}
+img {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:150%
+}
+  .login-info{
+      text-align: center;
+     font-size:larger;
+     font-style: normal;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+margin-top: 600px;
+margin-left: 600px;
+margin-right: 500px;
+margin-bottom: 700px;
+
+  }
