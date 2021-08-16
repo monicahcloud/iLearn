@@ -16,7 +16,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.example.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
@@ -38,7 +37,6 @@ public class Discussion {
 	@Column(name="diss_id")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int dissId;
-	
 	
 	@Column(name="content")
 	private String dissContent;
