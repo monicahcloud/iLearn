@@ -10,7 +10,7 @@ iLearn is a learning management system that enables teachers and students to man
 * Deployed application onto EC2 and S3 bucket
 
 # Technologies
-*Java
+* Java
 * Angular 
 * Spring Boot 
 * Postgres 
