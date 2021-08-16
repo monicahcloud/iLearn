@@ -16,7 +16,11 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+<<<<<<< HEAD:src/main/java/com/example/model/Discussion.java
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+import com.example.model.User;
+>>>>>>> parent of ff4277e (Discussion works?!):iLearn/src/main/java/com/example/model/Discussion.java
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -43,7 +47,6 @@ public class Discussion {
 	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="user_id")
-	@JsonIgnore
 	private User user;
 	
 	@ManyToMany(cascade=CascadeType.ALL)
