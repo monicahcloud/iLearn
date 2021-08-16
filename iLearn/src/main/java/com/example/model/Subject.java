@@ -20,7 +20,6 @@ import lombok.ToString;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
 @Table(name="subject")
 public class Subject {
@@ -45,4 +44,11 @@ public class Subject {
 	public Subject(String subject) {
 		this.subject = subject;
 	}
+	
+	@Override
+	public String toString() {
+		return "Subject [subjectId=" + subjectId + ", subject=" + subject + ", aType=" + aType + "]";
+	}
+	
+	
 }

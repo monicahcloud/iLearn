@@ -28,7 +28,6 @@ import lombok.ToString;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
 @Table(name="discussion")
 public class Discussion {
@@ -68,4 +67,12 @@ public class Discussion {
 		this.dissContent = dissContent;
 		this.user = user;
 	}
+
+	@Override
+	public String toString() {
+		return "Discussion [dissId=" + dissId + ", dissContent=" + dissContent + ", user=" + user + ", likes=" + likes
+				+ "]";
+	}
+	
+	
 }

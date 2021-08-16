@@ -21,6 +21,7 @@ import javax.persistence.Table;
 
 import com.example.model.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,8 +32,8 @@ import lombok.ToString;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
+@JsonIgnoreProperties(value= {"hibernateLazyInitializer", "handler"})
 @Table(name="users")
 public class User {
 
@@ -87,4 +88,13 @@ public class User {
 		this.email = email;
 		this.password = password;
 	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", username=" + username
+				+ ", email=" + email + ", password=" + password + ", userRoles=" + userRoles + ", diss=" + diss
+				+ ", likeDiss=" + likeDiss + "]";
+	}
+	
+	
 }

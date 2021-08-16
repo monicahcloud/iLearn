@@ -31,7 +31,6 @@ import lombok.ToString;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
 @Table(name="assignment")
 public class Assignment {
@@ -76,4 +75,16 @@ public class Assignment {
 	@JsonIgnore
 	@JoinColumn(name="subject")
 	private Subject subject;
+
+
+
+	@Override
+	public String toString() {
+		return "Assignment [assignId=" + assignId + ", grade=" + grade + ", createDate=" + createDate + ", updateDate="
+				+ updateDate + ", des=" + des + ", teacher=" + teacher + ", student=" + student + ", subject=" + subject
+				+ "]";
+	}
+	
+	
+	
 }
