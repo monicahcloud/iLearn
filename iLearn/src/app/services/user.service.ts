@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import {Location} from '@angular/common';
-import {Router} from '@angular/router';
 import {User} from 'src/app/User';
 import {Observable, throwError} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
@@ -17,14 +15,15 @@ export class UserService {
     username: ''
   }
 
-  login(username:string, password:string):void{
-    this.user = {
-      id:1,
-      username: username
-    }
-    //return this.http.post<User>("http://localhost:")
-    this.router.navigateByUrl('/home');
+  login(username:string, password:string):Observable<User>{
+   
+    return this.http.post<User>("http://localhost:8080/iLearn/api/login", JSON.stringify({username, password}))
+    .pipe(catchError((e) => {
+   
+    return throwError(e);
+    }));
 
   }
-  constructor(private router:Router , private location:Location ) { }
+  constructor(private http: HttpClient ) { }
 }
+// , private location:Location

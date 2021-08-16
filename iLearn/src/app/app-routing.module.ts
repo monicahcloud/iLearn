@@ -5,12 +5,13 @@ import {RouterModule, Routes} from '@angular/router';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { HomeGuard } from './guards/home.guard';
 import { DiscussionsComponent } from './components/discussions/discussions.component';
-
+import { GradesComponent } from './components/grades/grades.component';
 
 const routes: Routes = [
 {path:'home', component: HomePageComponent, canActivate: [HomeGuard]},
 {path: 'login', component: LoginPageComponent},
 {path: 'discussion', component: DiscussionsComponent},
+{path: 'grades', component: GradesComponent},
 {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 

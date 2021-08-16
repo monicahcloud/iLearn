@@ -21,6 +21,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TeacherHomePageComponent } from './components/teacher-home-page/teacher-home-page.component';
 import { DiscussionsComponent } from './components/discussions/discussions.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { GradesComponent } from './components/grades/grades.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     SidebarComponent,
     TeacherHomePageComponent,
     DiscussionsComponent,
+    GradesComponent,
     ],
   
     imports: [
