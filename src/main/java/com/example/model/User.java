@@ -1,5 +1,6 @@
 package com.example.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -15,7 +16,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 
 import com.example.model.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -54,6 +57,10 @@ public class User {
 	@Column(name="password", nullable=false)
 	private String password;
 	
+	@OneToMany(mappedBy="user", cascade=CascadeType.ALL)
+	@JsonIgnore
+	private List<Discussion> diss = new ArrayList<>();
+	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="role_FK", updatable=false, insertable=true)
 	private UserRoles userRoles;
@@ -62,16 +69,17 @@ public class User {
 	@JsonIgnore
 	private Set<Discussion> likeDiss = new HashSet<Discussion>();
 	
-	public User(String firstName, String lastName, String email, String password) {
+	public User(String firstName, String lastName, String email, String password, UserRoles uRoles) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.username = firstName + lastName + (new Random().nextInt(9000)+1000);
 		this.email = email;
 		this.password = password;
+		this.userRoles= uRoles;
 	}
 
-	public User(int id, String firstName, String lastName, String username, String email, String password) {
+	public User(int id, String firstName, String lastName, String username, String email, String password, UserRoles uRoles) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -79,15 +87,17 @@ public class User {
 		this.username = username;
 		this.email = email;
 		this.password = password;
+		this.userRoles= uRoles;
 	}
 
-	public User(String firstName, String lastName, String username, String email, String password) {
+	public User(String firstName, String lastName, String username, String email, String password, UserRoles uRoles) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.username = username;
 		this.email = email;
 		this.password = password;
+		this.userRoles= uRoles;
 	}
 	
 }
