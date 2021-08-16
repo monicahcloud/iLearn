@@ -1,12 +1,13 @@
 .content{
     width: 100%;
-    height: 600px;
+    height: 800px;
     color: #fff;
     background-image: url("../../../assets/College-students-studying.jpeg");
     background-size: cover;
     padding-top: 70px;
     padding-left: 30px;
     font-weight: lighter;
+    margin-top: 10px;
 }
 .loginn{
     background: rgba(8, 235, 57, 0.179);

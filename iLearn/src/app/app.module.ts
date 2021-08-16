@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import  {FormsModule} from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -17,12 +16,11 @@ import { PostsContainerComponent } from './components/posts-container/posts-cont
 import { PostComponent } from './components/post/post.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginPageComponent } from './components/login-page/login-page.component';
-
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TeacherHomePageComponent } from './components/teacher-home-page/teacher-home-page.component';
 import { DiscussionsComponent } from './components/discussions/discussions.component';
-
-
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +31,13 @@ import { DiscussionsComponent } from './components/discussions/discussions.compo
     PostsContainerComponent,
     PostComponent,
     LoginPageComponent,
-    
+    CalendarComponent,
     SidebarComponent,
     TeacherHomePageComponent,
     DiscussionsComponent,
-          
-  ],
-  imports: [
+    ],
+  
+    imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -50,8 +48,11 @@ import { DiscussionsComponent } from './components/discussions/discussions.compo
     MatDividerModule,
     MatListModule,
     FormsModule,
+    BsDatepickerModule.forRoot(),
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

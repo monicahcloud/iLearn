@@ -19,36 +19,42 @@
         <p class="designation">UserRole</p>
   
         <mat-divider></mat-divider>
-  
-        <button mat-button class="menu-button">
+
+        <a routerLink="/subjects">
+        <button mat-button id="subjects" class="menu-button">
             <mat-icon>class</mat-icon>
             <span>Subjects</span>
-        </button>
-        <button mat-button class="menu-button">
+        </button></a>
+
+        <a routerLink="/grades">
+        <button  mat-button id="grades" class="menu-button" >
             <mat-icon>grades</mat-icon>
             <span>View Grades</span>
-        </button>
-        <button mat-button class="menu-button">
+        </button></a>
+
+        <a routerLink="/discussion">
+        <button mat-button id="discussions" class="menu-button">
             <mat-icon>chat</mat-icon>
             <span>Discussions</span>
-        </button>
+        </button></a>
   
         <mat-divider></mat-divider>
   
-        <button mat-button class="menu-button">
+        <button mat-button id="schedule" class="menu-button">
             <mat-icon>schedule</mat-icon>
             <span>Schedule</span>
         </button>
-        <button mat-button class="menu-button">
+        
+        <button mat-button id="calendar" class="menu-button">
             <mat-icon>calendar_today</mat-icon>
             <span>Calendar</span>
         </button>
-        <button mat-button class="menu-button">
+        <button mat-button id="email" class="menu-button">
             <mat-icon>email</mat-icon>
             <span>Email</span>
         </button>
         <mat-divider></mat-divider>
-        <button mat-button class="menu-button">
+        <button mat-button id="logout" class="menu-button">
             <mat-icon>logout</mat-icon>
             <span>Logout</span>
         </button>
@@ -56,7 +62,7 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <br><br>
-     <H1>   GROW.... LEARN... THRIVE...</H1><br><br>
+     <h1>   GROW.... LEARN... THRIVE...</h1><br><br>
         <div class="content mat-elevation-z8">
             
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
@@ -83,30 +89,4 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-            <!-- <div  class=" carousel-fade" >
-               
-                    <img src="http://atlantablackstar.com/wp-content/uploads/2016/01/bigstock-group-of-happy-college-student-82983188-e1452870378709.jpg" class="css-img " alt="..."width="800" height="400" class="d-block w-100" >
-                  
-                    <img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2015/classroomtec.jpg" class="css-img " alt="..."width="800" height="400" class="d-block w-100" >
-                 
-                    <img src="http://i.huffpost.com/gen/1286846/images/o-LATINO-COLLEGE-facebook.jpg" class="css-img" alt="..."width="800" height="400" class="d-block w-100" >
-                  
-              -->
-                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button> -->
-              </div>
-       
-    </mat-sidenav-content>
-    <!-- <mat-sidenav-content>
-        <div class="content mat-elevation-z8">
-            Main content here!
-        </div>
-    </mat-sidenav-content> -->
-    
-  </mat-sidenav-container>
+          
