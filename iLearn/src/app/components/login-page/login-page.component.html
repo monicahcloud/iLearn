@@ -2,9 +2,11 @@
 <div class="content">
    <!-- // <img src='../../../assets/College-students-studying.jpeg'> -->
 <div class="loginn">
-   <h1>WELCOME TO <br><span class="i_learn">i-Learn</span></h1>
-<p>Login to Continue please</p>
+   <h1>WELCOME TO <br><br><span class="i_learn">i-Learn</span></h1>
+   <h2 >Please sign in using your iLearn username and password.</h2>
+
 <h1 *ngIf="error">Username of Password Incorrect</h1>
+
 <form id="login" (ngSubmit)="onSubmit()">
     <div class="input-div">
         <label for="username">Username: </label>
@@ -17,6 +19,7 @@
             [(ngModel)]="username"
         />
     </div><br>
+    
     <div class="input-div">
         <label for="password">Password: </label>
         <input

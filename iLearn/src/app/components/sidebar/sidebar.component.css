@@ -2,10 +2,23 @@ mat-toolbar {
     background: linear-gradient(90deg, #9ACD32 10%,#006400 100% );
     color: white;
 }
+h1 {
+    font-family: "Copperplate, Papyrus, fantasy";
+    text-align: center;
+    text-shadow: 2px 2px 5px yellowgreen;
+    font-weight: bold; 
+    font-style: oblique;
+    font-size: 80px;
+    color:#ebebeb;
+}
+img {
+    
+    box-shadow: 10px 10px 5px black;
+  }
 
 .profile-pic-icon {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     /* border-radius: 100%; */
     object-fit: contain;
     margin-top: 5px;

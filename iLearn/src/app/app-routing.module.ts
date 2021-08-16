@@ -9,6 +9,7 @@ import { HomeGuard } from './guards/home.guard';
 const routes: Routes = [
 {path:'home', component: HomePageComponent, canActivate: [HomeGuard]},
 {path: 'login', component: LoginPageComponent},
+
 {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 

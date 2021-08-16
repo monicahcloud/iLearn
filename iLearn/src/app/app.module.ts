@@ -17,9 +17,10 @@ import { PostsContainerComponent } from './components/posts-container/posts-cont
 import { PostComponent } from './components/post/post.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginPageComponent } from './components/login-page/login-page.component';
-import { AssignmentsComponent } from './components/assignments/assignments.component';
+
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TeacherHomePageComponent } from './components/teacher-home-page/teacher-home-page.component';
+import { DiscussionsComponent } from './components/discussions/discussions.component';
 
 
 
@@ -32,9 +33,10 @@ import { TeacherHomePageComponent } from './components/teacher-home-page/teacher
     PostsContainerComponent,
     PostComponent,
     LoginPageComponent,
-    AssignmentsComponent,
+    
     SidebarComponent,
     TeacherHomePageComponent,
+    DiscussionsComponent,
           
   ],
   imports: [
