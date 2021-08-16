@@ -36,5 +36,14 @@ public class UserController {
 			return new ResponseEntity<String>("User already exists", HttpStatus.CONFLICT);
 		}
 	}
+	@PostMapping("/login")
+	public ResponseEntity<User> loginUser(@RequestBody LinkedHashMap<String, String> user){
+		User u = uServ.loginUser(user.get("username"), user.get("password"));
+		if(u == null) {
+			return new ResponseEntity<User>(u, HttpStatus.FORBIDDEN);
+		}else { 
+			return new ResponseEntity<User>(u, HttpStatus.OK);
+		}
+	}
 }
 
