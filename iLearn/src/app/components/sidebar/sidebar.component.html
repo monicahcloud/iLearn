@@ -7,13 +7,13 @@
             close
         </mat-icon>
     </button>
-    iLearn 
+    <img class="profile-pic-icon" src="https://algesterss.eq.edu.au/ourenrolments/OpenDays/PublishingImages/enrolments/open-days/Yellow-iLearn-logo.png"/>
   </mat-toolbar>
   
   <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
   
-        <img class="avatar mat-elevation-z8" src="https://tse2.mm.bing.net/th?id=OIP.Nopq_3anu6-V6cw-G6j5DQHaHa&pid=Api&P=0&w=300&h=300" />
+        <img class="avatar mat-elevation-z8" src="https://freepikpsd.com/media/2019/10/default-user-profile-image-png-6-Transparent-Images.png" />
   
         <h4 class="name">First Name Last Name</h4>
         <p class="designation">UserRole</p>
@@ -30,7 +30,7 @@
         </button>
         <button mat-button class="menu-button">
             <mat-icon>chat</mat-icon>
-            <span>Discussion</span>
+            <span>Discussions</span>
         </button>
   
         <mat-divider></mat-divider>
@@ -51,13 +51,33 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <div class="content mat-elevation-z8">
-            Main content here!
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="http://atlantablackstar.com/wp-content/uploads/2016/01/bigstock-group-of-happy-college-student-82983188-e1452870378709.jpg" class="center " alt="..."width="800" height="400" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item active">
+                    <img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2015/classroomtec.jpg" class="center " alt="..."width="800" height="400" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
     </mat-sidenav-content>
-    <mat-sidenav-content>
+    <!-- <mat-sidenav-content>
         <div class="content mat-elevation-z8">
             Main content here!
         </div>
-    </mat-sidenav-content>
+    </mat-sidenav-content> -->
     
   </mat-sidenav-container>

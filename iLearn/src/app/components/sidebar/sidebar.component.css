@@ -1,12 +1,21 @@
 mat-toolbar {
-    background: #004a9f;
+    background: linear-gradient(90deg, #9ACD32 10%,#006400 100% );
     color: white;
 }
+
+.profile-pic-icon {
+    width: 100px;
+    height: 100px;
+    /* border-radius: 100%; */
+    object-fit: contain;
+    margin-top: 5px;
+}
+
 mat-sidenav {
     margin: 16px;
     width: 200px;
     border-right: none;
-    background: #002b5c;
+    background: linear-gradient(90deg, #9ACD32 10%,#006400 100% );
     color: white;
     border-radius: 10px;
     padding: 16px;
@@ -54,5 +63,5 @@ mat-sidenav-container {
 mat-divider {
     margin-top: 16px;
     margin-bottom: 16px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(90deg, #9ACD32 10%,#006400 100% );
 }
