@@ -1,0 +1,21 @@
+
+£
+java:S1319 "rThe type of the "user" object should be an interface such as "Map" rather than the implementation "LinkedHashMap".(è¡µ„úÿÿÿÿHRMINORZ
+CODE_SMELL
+‘
+java:S2293/"YReplace the type specification in this constructor call with the diamond operator ("<>").(ö‚òüÿÿÿÿ8Ú´ï´µ/H·RMINORZ
+CODE_SMELL
+…
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(ïÉá´H RMINORZ
+CODE_SMELL
+Š
+java:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(¶‡ı•üÿÿÿÿHRMINORZ
+CODE_SMELL
+‘
+java:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(ØÍÊ¬ÿÿÿÿÿ8Ú´ï´µ/H¸RMINORZ
+CODE_SMELL
+i	java:S106""9Replace this use of System.out or System.err by a logger.(ÖòÔÉùÿÿÿÿHŸRMAJORZ
+CODE_SMELL
+ª
+java:S1319,"rThe type of the "user" object should be an interface such as "Map" rather than the implementation "LinkedHashMap".(á¾Îÿÿÿÿÿ8Ú´ï´µ/H¹RMINORZ
+CODE_SMELL
