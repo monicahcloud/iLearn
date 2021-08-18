@@ -1,5 +1,47 @@
+<<<<<<< HEAD:README.md
 <<<<<<< HEAD
 # ILearn
+||||||| merged common ancestors:iLearn/README.md
+<<<<<<<<< Temporary merge branch 1
+# iLearn
+
+iLearn is a learning management system that enables teachers and students to manage the details of classroom activities. The purpose of the project is to build an application program to reduce the manual work for teachers and track all student assignments and discussions.
+
+# Roles/Responsibilities
+
+* Utilized Angular to create a single-page application
+* Incorporated CSS and TypeScript to customize various elements throughout the application
+* Implemented Spring Boot and Postgres to access/modify user data
+* Utilized Git to maintain proper version control during development
+* Deployed application onto EC2 and S3 bucket
+
+
+# Technologies
+Java, Angular, Spring Boot, Postgres, HTML, CSS, TypeScript
+||||||||| aa2a2472
+=========
+# ILearn
+=======
+# ILearn
+
+iLearn is a learning management system that enables teachers and students to manage the details of classroom activities. The purpose of the project is to build an application program to reduce the manual work for teachers and track all student assignments and discussions.
+
+# Roles/Responsibilities
+* Utilized Angular to create a single-page application
+* Incorporated CSS and TypeScript to customize various elements throughout the application
+* Implemented Spring Boot and Postgres to access/modify user data
+* Utilized Git to maintain proper version control during development
+* Deployed application onto EC2 and S3 bucket
+
+# Technologies
+* Java
+* Angular 
+* Spring Boot 
+* Postgres 
+* HTML 
+* CSS 
+* TypeScript
+>>>>>>> d080d0bf6061570b8316352f7f908facac1eef7a:iLearn/README.md
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
@@ -26,6 +68,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<<<<<<< HEAD:README.md
 ||||||| aa2a247
 =======
 # iLearn
@@ -44,3 +87,7 @@ iLearn is a learning management system that enables teachers and students to man
 # Technologies
 Java, Angular, Spring Boot, Postgres, HTML, CSS, TypeScript
 >>>>>>> main
+||||||| merged common ancestors:iLearn/README.md
+>>>>>>>>> Temporary merge branch 2
+=======
+>>>>>>> d080d0bf6061570b8316352f7f908facac1eef7a:iLearn/README.md
