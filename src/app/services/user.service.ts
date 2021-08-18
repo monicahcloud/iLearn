@@ -17,7 +17,7 @@ export class UserService {
 
   login(username:string, password:string):Observable<User>{
    
-    return this.http.post<User>("http://localhost:8080/iLearn/api/users/login", JSON.stringify({username, password}),{
+    return this.http.post<User>("http://localhost:8080/iLearn/api/login", JSON.stringify({username, password}),{
       headers: {
         'Content-Type': 'application/json'
       }
