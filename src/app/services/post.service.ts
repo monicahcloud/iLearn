@@ -11,43 +11,25 @@ import { UserService } from './user.service';
 })
 export class PostService {
 
-  posts:Posts[] = [];
-  
-  subject: Subject<Posts[]> = new Subject<Posts[]>();
+ 
+  constructor() { }
 
-  constructor(private http: HttpClient, private userService:UserService) { }
+  getPosts(): Posts[]{
+    return POSTS;
+    // this.http.get<Posts[]>('http://localhost:8080/iLearn/api/posts')
+    // .pipe(
+    //   catchError((e)=> {
+    //     return throwError(e);
+    //   }))
+    //   .subscribe(
+    //     (data) => {
+    //       this.posts = data;
+    //       this.subject.next(this.posts);
+        }
 
-//   getPosts(): Observable<Posts[]>{
-//     this.http.get<Posts[]>('http://localhost:8080/iLearn/api/posts')
-//     .pipe(
-//       catchError((e)=> {
-//         return throwError(e);
-//       }))
-//       .subscribe(
-//         (data) => {
-//           this.posts = data;
-//           this.subject.next(this.posts);
-//         }
-//       )
-// }
-
-addPost(post: Posts){
-  let obj = {
-    userId: this.userService.user.id,
-    content: post.content
-  }
-
-  this.http.post('http://localhost:8080/iLearn/api/posts', JSON.stringify(obj))
-  .pipe(
-    catchError((e)=>{
-      return throwError(e);
-    }))
-    .subscribe(
-      (data) => {
-        console.log(data);
-        this.posts.unshift(post);
-        this.subject.next(this.posts);
-      }
-    )
+addPost(post: Posts): Posts[]{
+  let postArr: Posts[] = POSTS;
+  postArr.unshift(post);
+  return postArr;
   }
 }
