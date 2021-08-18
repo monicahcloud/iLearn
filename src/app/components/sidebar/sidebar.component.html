@@ -1,0 +1,92 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <img class="profile-pic-icon" src="https://algesterss.eq.edu.au/ourenrolments/OpenDays/PublishingImages/enrolments/open-days/Yellow-iLearn-logo.png"/>
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+  
+        <img class="avatar mat-elevation-z8" src="https://freepikpsd.com/media/2019/10/default-user-profile-image-png-6-Transparent-Images.png" />
+  
+        <h4 class="name">First Name Last Name</h4>
+        <p class="designation">UserRole</p>
+  
+        <mat-divider></mat-divider>
+
+        <a routerLink="/subjects">
+        <button mat-button id="subjects" class="menu-button">
+            <mat-icon>class</mat-icon>
+            <span>Subjects</span>
+        </button></a>
+
+        <a routerLink="/grades">
+        <button  mat-button id="grades" class="menu-button" >
+            <mat-icon>grades</mat-icon>
+            <span>View Grades</span>
+        </button></a>
+
+        <a routerLink="/discussion">
+        <button mat-button id="discussions" class="menu-button">
+            <mat-icon>chat</mat-icon>
+            <span>Discussions</span>
+        </button></a>
+  
+        <mat-divider></mat-divider>
+  
+        <button mat-button id="schedule" class="menu-button">
+            <mat-icon>schedule</mat-icon>
+            <span>Schedule</span>
+        </button>
+        
+        <button mat-button id="calendar" class="menu-button">
+            <mat-icon>calendar_today</mat-icon>
+            <span>Calendar</span>
+        </button>
+        <button mat-button id="email" class="menu-button">
+            <mat-icon>email</mat-icon>
+            <span>Email</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-button id="logout" class="menu-button">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+        </button>
+  
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <br><br>
+     <h1>   GROW.... LEARN... THRIVE...</h1><br><br>
+        <div class="content mat-elevation-z8">
+            
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src=" http://atlantablackstar.com/wp-content/uploads/2016/01/bigstock-group-of-happy-college-student-82983188-e1452870378709.jpg" class="css-img " alt="..."width="1000" height="600" class="d-block w-100" >
+                   >
+                  </div>
+                  <div class="carousel-item ">
+                    <img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2015/classroomtec.jpg" class="css-img " alt="..."width="1000" height="600" class="d-block w-100" >
+                   >
+                  </div>
+                  <div class="carousel-item ">
+                    <img src="http://i.huffpost.com/gen/1286846/images/o-LATINO-COLLEGE-facebook.jpg" class="css-img" alt="..."width="1000" height="600" class="d-block w-100" >
+                   >
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          
