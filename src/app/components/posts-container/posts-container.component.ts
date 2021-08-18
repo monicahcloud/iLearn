@@ -21,7 +21,7 @@ export class PostsContainerComponent implements OnInit {
 
   ngOnInit(): void {
     //use ngOnInit lifecycle method to grab the posts as soon as the posts-container component is created
-    this.posts = this.postService.getPosts();
+    //this.posts = this.postService.getPosts();
   }
 
 }

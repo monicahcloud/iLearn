@@ -12,24 +12,26 @@ import { UserService } from './user.service';
 export class PostService {
 
   posts:Posts[] = [];
+  
   subject: Subject<Posts[]> = new Subject<Posts[]>();
+
   constructor(private http: HttpClient, private userService:UserService) { }
 
-  getPosts(): Observable<Posts[]>{
-    this.http.get<Posts[]>('http://localhost:8080/iLearn/api/posts')
-    .pipe(
-      catchError((e)=> {
-        return throwError(e);
-      }))
-      .subscribe(
-        (data) => {
-          this.posts = data;
-          this.subject.next(this.posts);
-        }
-      )
-}
+//   getPosts(): Observable<Posts[]>{
+//     this.http.get<Posts[]>('http://localhost:8080/iLearn/api/posts')
+//     .pipe(
+//       catchError((e)=> {
+//         return throwError(e);
+//       }))
+//       .subscribe(
+//         (data) => {
+//           this.posts = data;
+//           this.subject.next(this.posts);
+//         }
+//       )
+// }
 
-addPost(post: Post){
+addPost(post: Posts){
   let obj = {
     userId: this.userService.user.id,
     content: post.content
