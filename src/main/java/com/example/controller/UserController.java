@@ -20,9 +20,9 @@ import lombok.NoArgsConstructor;
 
 @RestController
 
-//@RequestMapping(value="/users")
-@CrossOrigin(origins = "http://localhost:4200", maxAge=3600)
-@RequestMapping({"/api"})
+@RequestMapping(value="/users")
+@CrossOrigin(origins = "*")
+//@RequestMapping({"/api"})
 @NoArgsConstructor
 @AllArgsConstructor(onConstructor=@__(@Autowired))
 public class UserController {
