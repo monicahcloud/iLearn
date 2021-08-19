@@ -20,10 +20,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TeacherHomePageComponent } from './components/teacher-home-page/teacher-home-page.component';
 import { DiscussionsComponent } from './components/discussions/discussions.component';
-import { CalendarComponent } from './components/calendar/calendar.component';
 import { GradesComponent } from './components/grades/grades.component';
 import { HttpClientModule } from '@angular/common/http';
-
 
 @NgModule({
   declarations: [
@@ -34,7 +32,6 @@ import { HttpClientModule } from '@angular/common/http';
     PostsContainerComponent,
     PostComponent,
     LoginPageComponent,
-    CalendarComponent,
     SidebarComponent,
     TeacherHomePageComponent,
     DiscussionsComponent,
