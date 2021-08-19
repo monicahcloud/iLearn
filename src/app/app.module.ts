@@ -21,6 +21,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TeacherHomePageComponent } from './components/teacher-home-page/teacher-home-page.component';
 import { DiscussionsComponent } from './components/discussions/discussions.component';
 import { GradesComponent } from './components/grades/grades.component';
+import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -36,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     TeacherHomePageComponent,
     DiscussionsComponent,
     GradesComponent,
+    RegisterComponent,
     ],
   
     imports: [

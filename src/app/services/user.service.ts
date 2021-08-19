@@ -23,25 +23,22 @@ export class UserService {
       }
     })
     .pipe(catchError((e) => {
-   
     return throwError(e);
     }));
 
   }
+
+  register(firstName:string, lastName:string, email:string, password: string, roleId: number): Observable<User>{
+    return this.http.post<User>("http://localhost:8080/users/register", JSON.stringify({firstName, lastName, email, password, roleId}),{
+      headers: {
+        'Content-Type': 'application/json'
+      }})
+    
+    .pipe(catchError((e) => {
+      return throwError(e);
+    }));
+  }
   constructor(private http: HttpClient ) { }
+
+
 }
-
-
-// register(firstName:string, lastName:string, email:string, password: string, userRole: string): Observable<User>{
-//   return this.http.post<User>("http://localhost:8080/users/register", JSON.stringify({firstName, lastName, email, password, userRole}),{
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }})
-  
-//   .pipe(catchError((e) => {
-//     return throwError(e);
-//   }));
-
-
-//  constructor(private http: HttpClient) { }
-// }
