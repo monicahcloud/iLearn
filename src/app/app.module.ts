@@ -23,6 +23,8 @@ import { DiscussionsComponent } from './components/discussions/discussions.compo
 import { GradesComponent } from './components/grades/grades.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TeacherSidebarComponent } from './components/teacher-sidebar/teacher-sidebar.component';
+import { SubjectsComponent } from './components/subjects/subjects.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     DiscussionsComponent,
     GradesComponent,
     RegisterComponent,
+    TeacherSidebarComponent,
+    SubjectsComponent,
     ],
   
     imports: [

@@ -11,6 +11,8 @@ export class LoginPageComponent implements OnInit {
 
   username: string = '';
   password: string = '';
+  userRole: object = {userrole:''};
+  userrole: string = '';
   error: boolean = false;
 
   constructor(private userService:UserService, private router:Router) { }
@@ -18,17 +20,28 @@ export class LoginPageComponent implements OnInit {
   onSubmit(): void{
     console.log(this.username, this.password);
     this.userService.login(this.username, this.password)
-    .subscribe(data => {this.userService.user = {
+    .subscribe(data => {
+     
+      this.userService.user = {
       id: data.id,
-      username: data.username
+      username: data.username,
+      userRoles: data.userRoles
     }
+    console.log(data)
     this.error = false;
-    this.router.navigateByUrl('/home');
+    console.log(this.userService.user.userRoles);
+     if(this.userService.user.userRoles){
+       if(this.userService.user.userRoles.userRole === "STUDENT"){
+       this.router.navigateByUrl('/home');
+      }else  {
+       this.router.navigateByUrl('/teacher');
+    }
+     } 
+
   },
     (error) => this.error=true);
 }
 
   ngOnInit(): void {
   }
-
 }

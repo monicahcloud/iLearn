@@ -12,7 +12,7 @@ export class PostComponent implements OnInit {
 
   @Input() post: Posts ={
     id: 0,
-    user: '',
+    username: '',
     content: '',
     likes:0
   };
@@ -22,14 +22,16 @@ export class PostComponent implements OnInit {
     likePost(): void{
       if (this.liked){
         this.liked = !this.liked;
-        this.post.likes--;
-
-      }else{
+        if(this.post.likes){
+          this.post.likes--;
+        }
+      } else {
         this.liked = !this.liked;
-        this.post.likes++;
+       if(this.post.likes){
+         this.post.likes++;
       }
     }
-
+  }
   constructor() { }
 
   ngOnInit(): void {

@@ -3,7 +3,7 @@ import {User} from 'src/app/User';
 import {Observable, throwError} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {catchError, retry} from 'rxjs/operators';
-import { registerLocaleData } from '@angular/common';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,7 @@ export class UserService {
   user:User = {
     id: 0,
     username: '',
+    userrole: ''
     }
 
   login(username:string, password:string):Observable<User>{
@@ -25,7 +26,6 @@ export class UserService {
     .pipe(catchError((e) => {
     return throwError(e);
     }));
-
   }
 
   register(firstName:string, lastName:string, email:string, password: string, roleId: number): Observable<User>{
@@ -33,12 +33,10 @@ export class UserService {
       headers: {
         'Content-Type': 'application/json'
       }})
-    
     .pipe(catchError((e) => {
       return throwError(e);
     }));
   }
   constructor(private http: HttpClient ) { }
-
 
 }
