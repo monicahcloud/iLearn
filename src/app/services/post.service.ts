@@ -17,7 +17,11 @@ export class PostService {
 
 
   getPosts(){
-   this.http.get<Posts[]>('http://localhost:8080/discussion/create')
+   this.http.get<Posts[]>('http://localhost:8080/users/discussion/'+ this.userService.user.id,{
+     headers:{
+       'Content-type': 'application/json'
+     }
+   })
    .pipe(
     catchError((e)=> {
     return throwError(e);
@@ -29,12 +33,28 @@ export class PostService {
         }
      )
       }
-
+      getAllPosts(){
+        this.http.get<Posts[]>('http://localhost:8080/discussion/all',{
+          headers:{
+            'Content-type': 'application/json'
+          }
+        })
+        .pipe(
+         catchError((e)=> {
+         return throwError(e);
+       }))
+          .subscribe(
+           (data) => {
+            this.posts = data;
+             this.subject.next(this.posts);
+             }
+          )
+           }
       
 addPost(post: Posts){
   let obj = {
     userId: this.userService.user.id,
-    content: post.content
+    dissContent: post.dissContent
   } 
   console.log(obj)
   this.http.post('http://localhost:8080/discussion/create', JSON.stringify(obj),

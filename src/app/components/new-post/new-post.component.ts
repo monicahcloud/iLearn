@@ -27,11 +27,10 @@ onSubmit(): void{
   }
 
   const newPost: Posts = {
-    id: 0,
-    username: this.userService.user.username,
-    content: this.content,
-    likes: this.likes,
-    date: new Date()
+    dissId: 0,
+   
+    dissContent: this.content,
+    
   }
 
 

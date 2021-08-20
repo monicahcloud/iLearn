@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Posts } from 'src/app/Posts';
+import{UserService} from 'src/app/services/user.service'
 
 
 @Component({
@@ -9,30 +10,16 @@ import { Posts } from 'src/app/Posts';
 })
 export class PostComponent implements OnInit {
 
-
+  username = this.userService.user.username;
+  
+  liked = false;
   @Input() post: Posts ={
-    id: 0,
-    username: '',
-    content: '',
-    likes:0
+    dissId: 0,
+    dissContent: '',
+    
   };
 
-    liked: boolean = false;
-
-    likePost(): void{
-      if (this.liked){
-        this.liked = !this.liked;
-        if(this.post.likes){
-          this.post.likes--;
-        }
-      } else {
-        this.liked = !this.liked;
-       if(this.post.likes){
-         this.post.likes++;
-      }
-    }
-  }
-  constructor() { }
+  constructor(private userService:UserService) { }
 
   ngOnInit(): void {
   }
