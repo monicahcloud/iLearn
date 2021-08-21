@@ -1,0 +1,122 @@
+<app-navbar></app-navbar>
+<h1>Register New User</h1>
+
+<!-- <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+<strong> Success !</strong> Your data has been entered successfully.
+<button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div> -->
+
+<div class="registration-container">
+  <form id="register" (ngSubmit)="onSubmit()">
+    <div class="row mb-3">
+        <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+        <div class="col-sm-10">
+          <input 
+          [(ngModel)]="firstName" 
+          name="firstName" 
+          type="text" 
+          class="form-control"  
+          id="firstName">
+        </div><br>
+      </div>
+
+      <div class="row mb-3">
+        <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+        <div class="col-sm-10">
+          <input 
+          [(ngModel)]="lastName" 
+          name="lastName" 
+          type="text" 
+          class="form-control"  
+          id="lastName">
+        </div><br>
+      </div>
+
+    <div class="row mb-3">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input 
+        type="text" 
+        class="form-control" 
+        [(ngModel)]="email" 
+        name="email" 
+        id="email">
+      </div>
+    </div><br>
+
+    <div class="row mb-3">
+      <label for="password" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input 
+        type="text" 
+        class="form-control" 
+        [(ngModel)]="password" 
+        id="password"
+        name="password"> 
+      </div>
+    </div>
+
+    <div class="row mb-3">
+        <h4>Choose one: </h4>
+        <div class="radio-btn">
+    <input  name="type" type="radio" aria-label="Checkbox for following text input" [(ngModel)]="roleId" value="1"
+    class="radio-group" id="teacher">
+  <label class="form-check-label" for="defaultCheck1">Teacher</label><br>
+  <input name="type" type="radio" aria-label="Checkbox for following text input" [(ngModel)]="roleId" value="2" class="radio-group"
+    id="student">
+  <label class="form-check-label" for="defaultCheck1">Student</label><br><br>
+</div>
+</div>
+
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+</div>
+
+
+<!-- <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="userRole">User Role</label>
+        <div *ngIf="submitted && f.userRole.errors" class="invalid-feedback">
+            <div *ngIf="f.userRole.errors.required">UserRole is required</div>
+            <div *ngIf="f.userRole.errors.minlength">UserRole must be either Teacher or Student</div>
+            <input  name="type" type="radio" aria-label="Checkbox for following text input" value="1"
+        class="radio-group" id="teacher">
+      <label class="form-check-label" for="defaultCheck1">Teacher</label><br>
+      <input name="type" type="radio" aria-label="Checkbox for following text input" value="2" class="radio-group"
+        id="student">
+        <label class="form-check-label" for="defaultCheck1">Student</label><br>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+        </button>
+        <a routerLink="/register" class="btn btn-link">Cancel</a>
+    </div>
+</form> -->

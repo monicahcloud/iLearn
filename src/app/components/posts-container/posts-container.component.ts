@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Posts} from 'src/app/Posts';
 import { PostService } from 'src/app/services/post.service';
-
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-posts-container',
@@ -10,18 +10,23 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class PostsContainerComponent implements OnInit {
 
-  posts: Posts[] = [];
+  posts: Observable<Posts[]> = new Observable<Posts[]>();
 
-    addPosts(post: Posts): void{
-      this.posts = this.postService.addPost(post);
-
-
+    addPost(post: Posts): void{
+      this.postService.addPost(post);
+      this.posts = this.postService.subject;
+      console.log("post is submitted into the database")
     }
+    
   constructor(private postService:PostService) { }
 
   ngOnInit(): void {
     //use ngOnInit lifecycle method to grab the posts as soon as the posts-container component is created
-    this.posts = this.postService.getPosts();
+    console.log(this.postService.subject)
+    // this.postService.getPosts();
+    this.postService.getAllPosts();
+    this.posts = this.postService.subject;
+    console.log(this.posts)
   }
 
 }
