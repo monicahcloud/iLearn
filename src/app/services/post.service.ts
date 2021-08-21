@@ -54,7 +54,7 @@ export class PostService {
 addPost(post: Posts){
   let obj = {
     userId: this.userService.user.id,
-    dissContent: post.dissContent
+    content: post.dissContent
   } 
   console.log(obj)
   this.http.post('http://localhost:8080/discussion/create', JSON.stringify(obj),

@@ -13,7 +13,7 @@ export class NewPostComponent implements OnInit {
   @Output() onAddPost: EventEmitter<Posts> = new EventEmitter();
 
 username: string = '';
-content : string = '';
+content  : string = '';
 likes: number = 0;
 error: boolean = false;
 date: Date = new Date();
@@ -21,7 +21,7 @@ date: Date = new Date();
 constructor(private userService:UserService) { }
 
 onSubmit(): void{
-  if(!this.content){
+  if(!this.content ){
     this.error= true;
     return;
   }
@@ -29,14 +29,13 @@ onSubmit(): void{
   const newPost: Posts = {
     dissId: 0,
    
-    dissContent: this.content,
+    dissContent: this.content ,
     
   }
-
-
+ 
   this.onAddPost.emit(newPost);
 
-  this.content= '';
+  this.content = '';
   this.error = false;
 
 }
