@@ -23,6 +23,7 @@ export class UserService {
     des: '',
     grade: '',
     createDate: new Date,
+    userId: 0,
       }
   
       create( userId:number, subjectId:number, des:String): Observable<User>{
@@ -57,6 +58,15 @@ export class UserService {
     }));
   }
 
+  update(userId:number, password: string): Observable<User>{
+    return this.http.post<User>("http://localhost:8080/users/update", JSON.stringify({userId, password}),{
+      headers: {
+        'Content-Type': 'application/json'
+      }})
+    .pipe(catchError((e) => {
+      return throwError(e);
+    }));
+  }
   
   constructor(private http: HttpClient ) { }
 

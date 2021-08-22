@@ -15,5 +15,6 @@ export interface User {
     grade?: string,
     createDate?: Date,
     subjectId?: number,
+    userId?: number,
  }
 

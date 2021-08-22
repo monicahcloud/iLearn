@@ -1,27 +1,22 @@
 <app-navbar></app-navbar>
 <!-- //*ngFor="let post of (posts | async)" [post]="post" -->
 <!-- <div *ngFor="let assign of ( assigns | async)" [assign]="assign"></div> -->
+<app-navbar></app-navbar>
+<!-- //*ngFor="let post of (posts | async)" [post]="post" -->
+<!-- <div *ngFor="let assign of ( assigns | async)" [assign]="assign"></div> -->
+
 
  <div class="container">
-<table class="row" *ngFor="let assign of  assigns"> 
-    
-    <tr class="header">
-       <th> assignId</th>
-       <th>name</th>
-       <th>Description</th>
-       <th>Grade</th>
-    </tr>
-    
-
-        <!--  -->
-            <tr class="data">
-            <td class="a">{{assign.assignId}}</td>
-            <td>{{assign.name}}</td>
-            <td>{{assign.des}}</td>
-            <td class="b"> {{assign.grade}}</td>
-        </tr>
-   
-
-</table>
+<h1>Assigned Assignments</h1>
+<div  *ngFor="let assign of  assigns"> 
+    <div class="row">
+    <p>  AssignId:  <span>{{assign.assignId}}</span></p>
+    <p>  Name:  <span>{{assign.name}}</span></p>
+    <p> Description:  <span>{{assign.des}}</span></p>
+    <p> Grade:  <span>{{assign.grade}}</span></p>
 </div>
+</div>
+</div>
+
+
 

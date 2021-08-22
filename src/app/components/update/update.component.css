@@ -1,0 +1,22 @@
+.card-container{
+    /* margin: 10px 20px; */
+    margin: 0;
+    display: flexbox;
+    justify-content: space-between;
+  }
+
+  h2{
+      margin-top: 10%;
+      margin-left: 20%;
+      
+  }
+    .update-container{
+        margin-top: 5%;
+        text-align: center;
+
+    }
+    .update{
+margin-left: 15%;
+margin-right: 40%;
+    }
+   

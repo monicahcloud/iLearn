@@ -27,6 +27,7 @@ import { TeacherSidebarComponent } from './components/teacher-sidebar/teacher-si
 import { AssignmentsComponent } from './components/assignments/assignments.component';
 import { ViewAssignmentsComponent } from './components/view-assignments/view-assignments.component';
 import { AssignmentContainerComponent } from './components/assignment-container/assignment-container.component';
+import { UpdateComponent } from './components/update/update.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { AssignmentContainerComponent } from './components/assignment-container/
      AssignmentsComponent,
      ViewAssignmentsComponent,
      AssignmentContainerComponent,
+     UpdateComponent,
     ],
   
     imports: [
