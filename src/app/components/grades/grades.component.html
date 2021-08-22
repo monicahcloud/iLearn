@@ -9,5 +9,25 @@
             <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
                     </ul>
     </nav>
+
+    <div class="container">
+        <table class="row" *ngFor="let assign of  assigns"
+        >
+            <tr class="header">
+                <th>AssignId</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Grade</th>
+            </tr>
+
+            <tr class="data">
+                <td>{{assign.assignId}}</td>
+                <td>{{assign.name}}</td>
+                <td>{{assign.des}}</td>
+                <td>{{assign.grade}}</td>
+            </tr>
+        </table>
+    </div>
+
 </div>
 <br>

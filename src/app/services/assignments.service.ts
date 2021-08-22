@@ -49,4 +49,22 @@ export class AssignmentsService {
          }
       )
        }
+
+  viewGrades(){
+    this.http.get<Assignments[]>('http://localhost:8080/assignment/viewgrades',{
+          headers:{
+            'Content-type': 'application/json'
+          }
+        })
+        .pipe(
+         catchError((e)=> {
+         return throwError(e);
+       }))
+          .subscribe(
+           (data) => {
+            this.assignment = data;
+             this.subject.next(this.assignment);
+             }
+          )
+           }
 }

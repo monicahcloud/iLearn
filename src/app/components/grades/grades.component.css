@@ -145,3 +145,62 @@ h1{
     margin-left: auto;
     margin-right: auto;
 }
+.header{
+    font-size: 20px;
+   
+   
+    
+}
+.row{
+    margin-top: 100px;
+    
+    
+}
+.header{
+    font-weight: bold; 
+}
+.container{
+    /* background-color:black; */
+    color: black;
+    font-weight: bolder;
+    margin-top: 200px;
+}
+
+th{
+margin-right: 150px;
+padding-left: 120px;
+}
+
+td{
+    margin-left: 310px;
+    padding-left: 90px;
+    width: 80px;
+}
+
+.assign-component{
+    margin-top: 380px;
+    padding-top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+    height:fit-content;
+}
+.data{
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+
+/* }
+th{
+    margin-right: 150px;
+   
+    }
+    td{
+        margin-left: 150px;
+        
+        width: 80px;
+    } */
