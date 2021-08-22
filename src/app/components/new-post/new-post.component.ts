@@ -28,7 +28,6 @@ onSubmit(): void{
 
   const newPost: Posts = {
     dissId: 0,
-   
     dissContent: this.content ,
     
   }

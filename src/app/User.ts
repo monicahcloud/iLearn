@@ -9,5 +9,11 @@ export interface User {
     roleId?: number,
     userRoles?: any,
     userrole?: string
+    assignId?: number,
+    name?: string,
+    des?: string,
+    grade?: string,
+    createDate?: Date,
+    subjectId?: number,
  }
 

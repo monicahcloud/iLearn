@@ -24,7 +24,10 @@ import { GradesComponent } from './components/grades/grades.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TeacherSidebarComponent } from './components/teacher-sidebar/teacher-sidebar.component';
-import { SubjectsComponent } from './components/subjects/subjects.component';
+import { AssignmentsComponent } from './components/assignments/assignments.component';
+import { ViewAssignmentsComponent } from './components/view-assignments/view-assignments.component';
+import { AssignmentContainerComponent } from './components/assignment-container/assignment-container.component';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { SubjectsComponent } from './components/subjects/subjects.component';
     GradesComponent,
     RegisterComponent,
     TeacherSidebarComponent,
-    SubjectsComponent,
+     AssignmentsComponent,
+     ViewAssignmentsComponent,
+     AssignmentContainerComponent,
     ],
   
     imports: [
