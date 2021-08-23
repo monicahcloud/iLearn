@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+
+<div class="grade-assignment-container">
+    <form id="grade-assignment" (ngSubmit)="onSubmit()" > 
+      <div class="row mb-3">
+        <label for="id" class="col-sm-2 col-form-label">Enter Student's ID number</label>
+        <div class="col-sm-10">
+          <input type="" 
+          name="id"
+          [(ngModel)]="id"
+          class="form-control" 
+          id="id">
+        </div> 
+      </div>
+
+    
+          <div class="row mb-3">
+            <label for="grade" class="col-sm-2 col-form-label">Enter Student's Grade</label>
+            <div class="col-sm-10">
+              <input type="text" 
+              name="grade"
+              [(ngModel)]="grade"
+              class="form-control" 
+              id="grade">
+            </div> 
+          </div>
+
+           
+              <div class="row mb-3">
+                <label for="assignId" class="col-sm-2 col-form-label">Enter Assignment ID number</label>
+                <div class="col-sm-10">
+                  <input type="" 
+                  name="assignId"
+                  [(ngModel)]="assignId"
+                  class="form-control" 
+                  id="assignId">
+                </div> 
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit Grade</button>
+</form>
+ </div>
