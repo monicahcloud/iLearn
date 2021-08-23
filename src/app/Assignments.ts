@@ -7,4 +7,5 @@ export interface Assignments {
     createDate?: Date,
     subjectId?: number,
     userId?: number,
+    content?: string,
 }

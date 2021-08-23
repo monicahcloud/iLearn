@@ -12,6 +12,7 @@ import { AssignmentsComponent } from './components/assignments/assignments.compo
 import { ViewAssignmentsComponent } from './components/view-assignments/view-assignments.component';
 import { UpdateComponent } from './components/update/update.component';
 import { GradeAssignmentsComponent } from './components/grade-assignments/grade-assignments.component';
+import { SubmitComponent } from './components/submit/submit.component';
 
 const routes: Routes = [
 {path:'home', component: HomePageComponent, canActivate: [HomeGuard]},
@@ -23,7 +24,8 @@ const routes: Routes = [
 {path: 'assignments', component: AssignmentsComponent},
 {path: 'view-assignments', component: ViewAssignmentsComponent},
 {path: 'grade-assignments', component:  GradeAssignmentsComponent},
-{path: 'update', component: UpdateComponent},
+{path: 'grade-assignments', component:  GradeAssignmentsComponent},
+{path: 'submit', component: SubmitComponent},
 {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 

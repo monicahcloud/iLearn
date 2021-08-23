@@ -22,9 +22,22 @@ export class AssignmentsService {
     createDate: new Date,
     userId: 0,
     id: 0,
-    }
+    content: '',
+    subjectId: 0,
+  }
 
   constructor(private http: HttpClient) { }
+  submitAssignments(userId:number, id:number, subjectId:number, name:string, content:string): Observable<Assignments>{
+    return this.http.post<Assignments>('http://localhost:8080/assignment/submit', JSON.stringify({userId, id, subjectId, name, content}),{
+           headers:{
+             'Content-type': 'application/json'
+           }
+         })
+         .pipe(
+          catchError((e)=> {
+          return throwError(e);
+        }))
+      }
 
   gradeAssignments(userId:number, grade:string, assignId:number): Observable<Assignments>{
    return this.http.post<Assignments>('http://localhost:8080/assignment/grade', JSON.stringify({userId, grade, assignId}),{

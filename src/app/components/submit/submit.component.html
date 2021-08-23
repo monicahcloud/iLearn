@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+<div class="submit-assignment">
+<form id="submit-assignment" (ngSubmit)="onSubmit()">
+    <div class="row mb-3">
+        <label for="userId" class="col-sm-2 col-form-label">Enter Student's ID number</label>
+        <div class="col-sm-10">
+          <input type="" 
+          name="userId"
+          [(ngModel)]="userId"
+          class="form-control" 
+          id="userId">
+        </div> 
+    </div> 
+
+
+    <div class="row mb-3">
+        <label for="id" class="col-sm-2 col-form-label">Enter Teacher's ID number</label>
+        <div class="col-sm-10">
+          <input type="" 
+          name="id"
+          [(ngModel)]="id"
+          class="form-control" 
+          id="id">
+        </div> 
+    </div> 
+
+    <div class="row mb-3">
+        <label for="subjectId" class="col-sm-2 col-form-label">Enter Subject's ID number</label>
+        <div class="col-sm-10">
+          <input type="" 
+          name="subjectId"
+          [(ngModel)]="subjectId"
+          class="form-control" 
+          id="subjectId">
+        </div> 
+    </div> 
+
+    <div class="row mb-3">
+        <label for="name" class="col-sm-2 col-form-label">Assignment Name</label>
+        <div class="col-sm-10">
+          <input type="" 
+          name="name"
+          [(ngModel)]="name"
+          class="form-control" 
+          id="name">
+        </div> 
+    </div> 
+    <div class="row mb-3">
+        <label for="content" class="col-sm-2 col-form-label">Enter Text Here</label>
+        <div class="col-sm-10">
+          <input type="" 
+          name="content"
+          [(ngModel)]="content"
+          class="form-control" 
+          id="content">
+        </div> 
+    </div> 
+    <button type="submit" class="btn btn-primary">Submit Assignment</button>
+</form>
+
+</div>
