@@ -33,6 +33,8 @@ export class PostService {
         }
      )
       }
+
+
       getAllPosts(){
         this.http.get<Posts[]>('http://localhost:8080/discussion/all',{
           headers:{
@@ -51,6 +53,8 @@ export class PostService {
           )
            }
       
+           
+
 addPost(post: Posts){
   let obj = {
     userId: this.userService.user.id,

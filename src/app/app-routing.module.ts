@@ -8,7 +8,9 @@ import { DiscussionsComponent } from './components/discussions/discussions.compo
 import { GradesComponent } from './components/grades/grades.component';
 import { RegisterComponent } from './components/register/register.component';
 import { TeacherHomePageComponent} from './components/teacher-home-page/teacher-home-page.component'
-import { SubjectsComponent } from './components/subjects/subjects.component';
+import { AssignmentsComponent } from './components/assignments/assignments.component';
+import { ViewAssignmentsComponent } from './components/view-assignments/view-assignments.component';
+import { UpdateComponent } from './components/update/update.component';
 
 const routes: Routes = [
 {path:'home', component: HomePageComponent, canActivate: [HomeGuard]},
@@ -17,7 +19,9 @@ const routes: Routes = [
 {path: 'grades', component: GradesComponent},
 {path: 'register', component: RegisterComponent},
 {path: 'teacher', component: TeacherHomePageComponent},
-{path: 'subjects', component: SubjectsComponent},
+{path: 'assignments', component: AssignmentsComponent},
+{path: 'view-assignments', component: ViewAssignmentsComponent},
+{path: 'update', component: UpdateComponent},
 {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 

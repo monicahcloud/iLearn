@@ -3,9 +3,9 @@
  
 <div class="loginn">
    <h1>WELCOME TO <br><br><span class="i_learn">i-Learn</span></h1>
-   <h2 >Please sign in using your iLearn username and password.</h2>
+   <h2>Please sign in using your iLearn username and password.</h2>
 
-<h2 *ngIf="error">Username of Password Incorrect</h2>
+<h2 *ngIf="error">Username or Password Incorrect</h2>
 
 <form id="login" (ngSubmit)="onSubmit()">
     <div class="input-div">
@@ -34,6 +34,8 @@
     <input class="input" type="submit" value="Login"/>
     <br><br>
     <a routerLink="/register" class="btn btn-warning" role="button">Create an iLearn account.</a>
+    <br><br>
+    <a routerLink="/update" class="btn btn-warning" role="button">Update Account Information</a>
 </form>
 </div>
 </div>

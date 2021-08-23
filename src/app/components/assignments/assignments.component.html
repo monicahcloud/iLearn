@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+<div class="create-assignment-container">
+<form id="create-assignment" (ngSubmit)="onSubmit()"> 
+  <div class="row mb-3">
+    <label for="des" class="col-sm-2 col-form-label">Enter your Employee ID</label>
+    <div class="col-sm-10">
+      <input type="" 
+      name="id"
+      [(ngModel)]="id"
+      class="form-control" 
+      id="id">
+    </div> 
+  </div>
+
+    <div class="row mb-3">
+      <label for="des" class="col-sm-2 col-form-label">Description of Assignment</label>
+      <div class="col-sm-10">
+        <input type="des" 
+        name="des"
+        [(ngModel)]="des"
+        class="form-control" 
+        id="des">
+      </div>
+    </div>
+    
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">Subject</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input"
+           type="radio" 
+           name="math"
+           [(ngModel)]="subjectId"
+           id="math" 
+           value="1"  >
+          <label class="form-check-label" for="gridRadios1">
+            Math
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input"
+           type="radio" 
+           name="english" 
+           id="english" 
+           [(ngModel)]="subjectId"
+            value="2"  >
+          <label class="form-check-label" for="gridRadios2">
+            English
+          </label>
+        </div>
+
+        <div class="form-check ">
+          <input class="form-check-input" 
+          type="radio" 
+          name="science" 
+          id="science" 
+          [(ngModel)]="subjectId"
+          value="3" >
+          <label class="form-check-label" for="gridRadios3">
+            Science
+          </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" 
+            type="radio" 
+            name="history" 
+            id="history"
+            [(ngModel)]="subjectId" 
+            value="4" >
+            <label class="form-check-label" for="gridRadios4">
+              History
+            </label>
+          </div>
+          
+      </div>
+    </fieldset>
+    
+    <button type="submit" class="btn btn-primary">Create Assignment</button>
+  </form>
+</div>
