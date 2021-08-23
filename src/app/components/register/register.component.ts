@@ -31,8 +31,8 @@ export class RegisterComponent implements OnInit {
         roleId: data.roleId
       }
       this.error = false;
-      //Is this the correct url?
-      this.router.navigateByUrl('/register');
+      
+      this.router.navigateByUrl('/login');
     },
       (error) => this.error=true);
   }
