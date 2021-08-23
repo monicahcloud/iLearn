@@ -8,18 +8,42 @@ import {Observable, throwError, Subject} from 'rxjs';
   providedIn: 'root'
 })
 export class AssignmentsService {
+
   assignment: Assignments[] = []
+
   subject: Subject<Assignments[]>  = new Subject<Assignments[]>();
 
 
-  // assignment:Assignments = {
-  //   assignId: 0,
-  //   name: '',
-  //   des: '',
-  //   grade: '',
-  //   createDate: new Date
-  //   }
+  assignments:Assignments = {
+    assignId: 0,
+    name: '',
+    des: '',
+    grade: '',
+    createDate: new Date,
+    userId: 0,
+    id: 0,
+    }
+
   constructor(private http: HttpClient) { }
+
+  gradeAssignments(userId:number, grade:string, assignId:number): Observable<Assignments>{
+   return this.http.post<Assignments>('http://localhost:8080/assignment/grade', JSON.stringify({userId, grade, assignId}),{
+          headers:{
+            'Content-type': 'application/json'
+          }
+        })
+        .pipe(
+         catchError((e)=> {
+         return throwError(e);
+       }))
+          // .subscribe(
+          //  (data) => {
+          //   this.assignment = data;
+          //    this.subject.next(this.assignment);
+          //    }
+          // )
+           }
+
 
     create(des:String): Observable<Assignments>{
       return this.http.post<Assignments>("http://localhost:8080/assignment/create", JSON.stringify({des}),{
@@ -68,5 +92,4 @@ export class AssignmentsService {
           )
            }
 
-          
 }

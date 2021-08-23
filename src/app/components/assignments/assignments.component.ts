@@ -30,7 +30,7 @@ export class AssignmentsComponent implements OnInit {
 
       }
       this.error = false;
-      //Is this the correct url?
+     
       this.router.navigateByUrl('/assignments');
     },
       (error) => this.error=true);

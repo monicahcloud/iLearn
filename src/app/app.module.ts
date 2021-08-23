@@ -28,6 +28,7 @@ import { AssignmentsComponent } from './components/assignments/assignments.compo
 import { ViewAssignmentsComponent } from './components/view-assignments/view-assignments.component';
 import { AssignmentContainerComponent } from './components/assignment-container/assignment-container.component';
 import { UpdateComponent } from './components/update/update.component';
+import { GradeAssignmentsComponent } from './components/grade-assignments/grade-assignments.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { UpdateComponent } from './components/update/update.component';
      ViewAssignmentsComponent,
      AssignmentContainerComponent,
      UpdateComponent,
+     GradeAssignmentsComponent,
     ],
   
     imports: [
